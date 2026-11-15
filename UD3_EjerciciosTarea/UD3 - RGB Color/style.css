@@ -1,0 +1,15 @@
+body { 
+    font-family: Arial, 
+    sans-serif; padding: 24px; }
+.control { display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    margin-bottom: 12px; }
+.control label { width: 60px; 
+    font-weight: bold; }
+.control input { width: 280px; }
+.control output { width: 40px; 
+    text-align: right; }
+#resumen { background: rgba(255, 255, 255, 0.85); 
+    display: inline-block; 
+    padding: 8px 12px; border-radius: 8px; }

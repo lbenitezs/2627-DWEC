@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Color RGB</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Color RGB</h1>
+
+  <div class="control">
+    <label for="rojo">Rojo</label>
+    <input type="range" id="rojo" min="0" max="255" value="255">
+    <output id="valorRojo">255</output>
+  </div>
+  <div class="control">
+    <label for="verde">Verde</label>
+    <input type="range" id="verde" min="0" max="255" value="255">
+    <output id="valorVerde">255</output>
+  </div>
+  <div class="control">
+    <label for="azul">Azul</label>
+    <input type="range" id="azul" min="0" max="255" value="255">
+    <output id="valorAzul">255</output>
+  </div>
+
+  <p id="resumen">Color actual: <strong id="texto">rgb(255, 255, 255)</strong></p>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
