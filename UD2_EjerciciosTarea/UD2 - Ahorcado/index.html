@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>UD2 - Ahorcado</title>
+</head>
+<body>
+
+  <h1>UD2 - Ahorcado</h1>
+  <p>Edita <code>script.js</code> y recarga esta página. También puedes abrir la consola (F12).</p>
+
+  <h2>Salida:</h2>
+  <pre id="output"></pre>
+
+  <script>
+    // Mostramos también console.log en la propia página, además de en la consola
+    const outputEl = document.getElementById('output');
+    const originalLog = console.log;
+    console.log = (...args) => {
+      originalLog(...args);
+      outputEl.textContent += args.join(' ') + '\n';
+    };
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
