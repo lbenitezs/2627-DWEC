@@ -1,0 +1,79 @@
+:root {
+  --amarillo: #f0db4f;
+  --carbon: #36454f;
+  --rojo: #c0504d;
+  --naranja: #e4a81d;
+  --verde: #4f7f28;
+  --gris: #6b7680;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #1f262b;
+  margin: 0;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 { margin: 0 0 16px; font-size: 24px; }
+
+form, .resumen {
+  background: #fff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.campo { margin-bottom: 14px; }
+label { display: block; font-weight: bold; font-size: 14px; margin-bottom: 4px; }
+
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #d0d3d6;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+}
+input.invalido { border-color: var(--rojo); }
+
+.error { display: block; min-height: 1.1em; margin-top: 4px; font-size: 13px; color: var(--rojo); }
+
+.fila-pass { display: flex; gap: 8px; }
+.fila-pass button { background: #eaebec; font-weight: normal; padding: 0 14px; }
+
+/* Indicador de fortaleza: JavaScript solo cambia la clase de #barra */
+.fortaleza { height: 8px; background: #e3e5e7; border-radius: 4px; overflow: hidden; margin-top: 8px; }
+#barra { height: 100%; width: 0; transition: width 0.2s; }
+#barra.debil { width: 33%; background: var(--rojo); }
+#barra.media { width: 66%; background: var(--naranja); }
+#barra.fuerte { width: 100%; background: var(--verde); }
+.texto-fortaleza { display: block; min-height: 1.1em; margin-top: 4px; font-size: 13px; color: var(--gris); }
+
+.check { display: flex; align-items: center; gap: 8px; }
+.check label { margin: 0; font-weight: normal; }
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  background: var(--amarillo);
+}
+button:disabled { background: #d9dbdd; color: #8a9097; cursor: not-allowed; }
+
+.resumen h2 { margin: 0 0 12px; font-size: 20px; color: var(--verde); }
+.resumen dl { margin: 0; }
+.resumen dt { font-weight: bold; font-size: 13px; color: var(--gris); margin-top: 8px; }
+.resumen dd { margin: 2px 0 0; }

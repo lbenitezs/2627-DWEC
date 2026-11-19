@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de usuario</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <form id="registro" novalidate>
+    <h1>Crear cuenta</h1>
+
+    <div class="campo">
+      <label for="usuario">Usuario</label>
+      <input id="usuario" name="usuario" type="text" autocomplete="off">
+      <span class="error" id="error-usuario"></span>
+    </div>
+
+    <div class="campo">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="off">
+      <span class="error" id="error-email"></span>
+    </div>
+
+    <div class="campo">
+      <label for="password">Contraseña</label>
+      <div class="fila-pass">
+        <input id="password" name="password" type="password" autocomplete="new-password">
+        <button type="button" id="ver">Mostrar</button>
+      </div>
+      <div class="fortaleza"><div id="barra"></div></div>
+      <span class="texto-fortaleza" id="texto-fortaleza"></span>
+      <span class="error" id="error-password"></span>
+    </div>
+
+    <div class="campo">
+      <label for="password2">Repite la contraseña</label>
+      <input id="password2" name="password2" type="password" autocomplete="new-password">
+      <span class="error" id="error-password2"></span>
+    </div>
+
+    <div class="campo">
+      <label for="cp">Código postal</label>
+      <input id="cp" name="cp" type="text" inputmode="numeric" autocomplete="off">
+      <span class="error" id="error-cp"></span>
+    </div>
+
+    <div class="campo">
+      <label for="fecha">Fecha de nacimiento</label>
+      <input id="fecha" name="fecha" type="date">
+      <span class="error" id="error-fecha"></span>
+    </div>
+
+    <div class="campo check">
+      <input id="acepto" name="acepto" type="checkbox">
+      <label for="acepto">Acepto las condiciones de uso</label>
+    </div>
+
+    <button type="submit" id="enviar" disabled>Crear cuenta</button>
+  </form>
+
+  <section class="resumen" id="resumen" hidden>
+    <h2>¡Cuenta creada!</h2>
+    <dl id="datos"></dl>
+  </section>
+
+</body>
+</html>

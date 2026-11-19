@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de contacto</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <form id="contacto" novalidate>
+    <h1>Contacto</h1>
+
+    <div class="campo">
+      <label for="nombre">Nombre</label>
+      <input id="nombre" name="nombre" type="text" autocomplete="off">
+      <span class="error" id="error-nombre"></span>
+    </div>
+
+    <div class="campo">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="off">
+      <span class="error" id="error-email"></span>
+    </div>
+
+    <div class="campo">
+      <label for="telefono">Teléfono <small>(opcional)</small></label>
+      <input id="telefono" name="telefono" type="text" inputmode="numeric" autocomplete="off">
+      <span class="error" id="error-telefono"></span>
+    </div>
+
+    <div class="campo">
+      <label for="motivo">Motivo</label>
+      <select id="motivo" name="motivo">
+        <option value="">Elige un motivo…</option>
+        <option value="duda">Tengo una duda</option>
+        <option value="sugerencia">Quiero hacer una sugerencia</option>
+        <option value="otro">Otro</option>
+      </select>
+      <span class="error" id="error-motivo"></span>
+    </div>
+
+    <div class="campo" id="campo-otro" hidden>
+      <label for="otro">¿Cuál?</label>
+      <input id="otro" name="otro" type="text" autocomplete="off">
+      <span class="error" id="error-otro"></span>
+    </div>
+
+    <div class="campo">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="4" maxlength="200"></textarea>
+      <div class="pie">
+        <span class="error" id="error-mensaje"></span>
+        <span class="contador" id="contador">0/200</span>
+      </div>
+    </div>
+
+    <div class="campo check">
+      <input id="acepto" name="acepto" type="checkbox">
+      <label for="acepto">Acepto las condiciones</label>
+    </div>
+
+    <button type="submit" id="enviar" disabled>Enviar</button>
+  </form>
+
+  <section class="resumen" id="resumen" hidden>
+    <h2>¡Mensaje enviado!</h2>
+    <dl id="datos"></dl>
+  </section>
+
+</body>
+</html>

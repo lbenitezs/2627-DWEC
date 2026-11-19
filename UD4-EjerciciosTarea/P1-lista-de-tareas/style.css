@@ -1,0 +1,78 @@
+:root {
+  --amarillo: #f0db4f;
+  --carbon: #36454f;
+  --rojo: #c0504d;
+  --verde: #4f7f28;
+  --gris: #6b7680;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  color: #1f262b;
+  margin: 0;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.tarjeta {
+  background: #fff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h1 { margin: 0 0 16px; font-size: 24px; }
+label { font-weight: bold; font-size: 14px; }
+
+.fila { display: flex; gap: 8px; margin-top: 6px; }
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #d0d3d6;
+  border-radius: 8px;
+  font-size: 16px;
+}
+input.invalido { border-color: var(--rojo); }
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 15px;
+  background: var(--amarillo);
+  font-weight: bold;
+}
+
+.mensaje { min-height: 1.2em; margin: 6px 0 0; font-size: 14px; color: var(--rojo); }
+
+.filtros { display: flex; gap: 6px; margin: 16px 0 8px; }
+.filtros button { background: #eaebec; font-weight: normal; padding: 6px 12px; }
+.filtros button.activo { background: var(--carbon); color: #fff; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+li span { flex: 1; }
+li.hecha span { text-decoration: line-through; color: var(--gris); }
+li .borrar { background: transparent; color: var(--rojo); padding: 4px 8px; }
+
+/* Los filtros solo cambian la clase de la lista: el CSS decide qué se ve */
+#lista.filtro-pendientes li.hecha { display: none; }
+#lista.filtro-hechas li:not(.hecha) { display: none; }
+
+.contador { color: var(--gris); font-size: 14px; margin: 12px 0 0; }
